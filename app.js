@@ -56,15 +56,16 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	__webpack_require__(631);
+	__webpack_require__(632);
 	__webpack_require__(618);
 	__webpack_require__(619);
 	__webpack_require__(620);
+	__webpack_require__(633);
 	__webpack_require__(621);
-	__webpack_require__(622);
-	__webpack_require__(623);
+	__webpack_require__(628);
+	__webpack_require__(629);
 	__webpack_require__(630);
-	__webpack_require__(631);
-	__webpack_require__(632);
 
 	var itemTemplate = function itemTemplate(data) {
 	  if (data.text.length < 200) return "";
@@ -84,7 +85,7 @@
 
 	search.addWidget(_instantsearch2.default.widgets.searchBox({
 	  container: '#search-box',
-	  placeholder: 'Search historical US presidential speech transcripts for quotes...',
+	  placeholder: 'Search historical US presidential speeches...',
 	  poweredBy: true
 	}));
 
@@ -62855,61 +62856,67 @@
 /* 618 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "favicon.ico";
+	module.exports = __webpack_require__.p + "bank.png";
 
 /***/ },
 /* 619 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "apple-touch-icon.png";
+	module.exports = __webpack_require__.p + "government.png";
 
 /***/ },
 /* 620 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "bank.png";
-
-/***/ },
-/* 621 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "government.png";
-
-/***/ },
-/* 622 */
-/***/ function(module, exports, __webpack_require__) {
-
 	module.exports = __webpack_require__.p + "washington-dc.png";
 
 /***/ },
-/* 623 */
+/* 621 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
+/* 622 */,
+/* 623 */,
 /* 624 */,
 /* 625 */,
 /* 626 */,
 /* 627 */,
-/* 628 */,
-/* 629 */,
-/* 630 */
+/* 628 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 631 */
+/* 629 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 630 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "index.html";
+
+/***/ },
+/* 631 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "favicon.ico";
 
 /***/ },
 /* 632 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "index.html";
+	module.exports = __webpack_require__.p + "apple-touch-icon.png";
+
+/***/ },
+/* 633 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "america-background.png";
 
 /***/ }
 /******/ ]);

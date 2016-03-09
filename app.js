@@ -85,7 +85,7 @@
 
 	search.addWidget(_instantsearch2.default.widgets.searchBox({
 	  container: '#search-box',
-	  placeholder: 'Search historical US presidential speeches...',
+	  placeholder: 'Search over 500 speeches by US presidents...',
 	  poweredBy: true
 	}));
 

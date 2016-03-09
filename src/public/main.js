@@ -6,6 +6,7 @@ require('./apple-touch-icon.png')
 require('./images/bank.png')
 require('./images/government.png')
 require('./images/washington-dc.png')
+require('./images/america-background.png')
 require('./css/bootstrap.css')
 require('./css/instantsearch.css')
 require('./css/main.css')
@@ -44,7 +45,7 @@ var search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-box',
-    placeholder: 'Search historical US presidential speech transcripts for quotes...',
+    placeholder: 'Search historical US presidential speeches...',
     poweredBy: true
   })
 )

@@ -45,7 +45,7 @@ var search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-box',
-    placeholder: 'Search historical US presidential speeches...',
+    placeholder: 'Search over 500 speeches by US presidents...',
     poweredBy: true
   })
 )

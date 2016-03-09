@@ -67,11 +67,12 @@
 	__webpack_require__(632);
 
 	var itemTemplate = function itemTemplate(data) {
+	  if (data.text.length < 200) return "";
 	  var quoteValue = data._highlightResult.text.value;
 	  var shortQuoteValue = data._highlightResult.text.value;
 	  var friendlyDate = (0, _moment2.default)(data.unixDate * 1000).format('MMM Do, YYYY');
 	  var friendlyAgo = (0, _moment2.default)(data.unixDate * 1000).fromNow();
-	  return '\n    <div class="panel panel-default">\n      <div class="panel-body">\n        <div class="col-md-12">\n          <p class="quote-text">' + quoteValue + '</p>\n        </div>\n      </div>\n      <div class="panel-footer">\n        <a target="_blank" href="' + data.url + '">' + data._highlightResult.title.value + '</a>\n        <br/>\n        <span class="text-muted"><strong>' + data._highlightResult.speaker.value + '</strong> — ' + friendlyDate + ' <i>(' + friendlyAgo + ')</i></span>\n      </div>\n    </div>\n  ';
+	  return '\n    <div class="panel panel-default">\n      <div class="panel-body">\n        <div class="col-md-12">\n          <p class="quote-text">' + quoteValue + '</p>\n        </div>\n      </div>\n      <div class="panel-footer">\n        <a target="_blank" href="' + data.url + '">' + data._highlightResult.title.value + '</a>\n        <br/>\n        <span class="text-muted"><strong>' + data._highlightResult.speaker.value + '</strong> &middot; ' + friendlyDate + ' &middot; ' + friendlyAgo + '</span>\n      </div>\n    </div>\n  ';
 	};
 
 	var search = (0, _instantsearch2.default)({
@@ -84,11 +85,7 @@
 	search.addWidget(_instantsearch2.default.widgets.searchBox({
 	  container: '#search-box',
 	  placeholder: 'Search historical US presidential speech transcripts for quotes...',
-	  poweredBy: true,
-	  queryHook: function queryHook(query, func) {
-	    console.log(query);
-	    if (query.length > 0) func(query);
-	  }
+	  poweredBy: true
 	}));
 
 	search.addWidget(_instantsearch2.default.widgets.hits({
@@ -97,7 +94,7 @@
 	    empty: '<p class="nothing-found text-danger">No quotes found.</p>',
 	    item: itemTemplate
 	  },
-	  hitsPerPage: 100
+	  hitsPerPage: 50
 	}));
 
 	search.addWidget(_instantsearch2.default.widgets.stats({
@@ -107,8 +104,7 @@
 	search.addWidget(_instantsearch2.default.widgets.pagination({
 	  container: '#pagination-container',
 	  maxPages: 20,
-	  // default is to scroll to 'body', here we disable this behavior
-	  scrollTo: false
+	  scrollTo: "#hits-container"
 	}));
 
 	search.start();

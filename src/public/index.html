@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Oval Quotes &middot; Presidential Speeches</title>
+    <meta charSet="utf-8"/>
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Get quotes from historic US presidential speeches"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png"/>
+    <link rel='stylesheet' href='./app.css'/>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <p class="text-center">
+            <img class="header-image" src="bank.png" />
+          </p>
+          <h1 class="text-center">Oval Quotes</h1>
+          <p class="small text-center"><em>created by <a href="https://twitter.com/dzello">@dzello</a>
+            &middot; powered by <a href="https://www.algolia.com/">Algolia</a>
+            &middot; data from <a href="http://millercenter.org/">The Miller Center</a>
+          </em></p>
+          <br/>
+          <div class="form">
+            <input class="form-control input-lg" type="text" id="search-box" />
+          </div>
+          <div id="stats-container" class="text-muted"></div>
+          <div class="clearfix"></div>
+          <div id="hits-container"></div>
+          <div id="pagination-container"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

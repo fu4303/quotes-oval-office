@@ -85,7 +85,7 @@
 
 	search.addWidget(_instantsearch2.default.widgets.searchBox({
 	  container: '#search-box',
-	  placeholder: 'Search over 500 speeches by US presidents...',
+	  placeholder: 'Search 500+ speeches by 43 US presidents...',
 	  poweredBy: true
 	}));
 
@@ -62868,7 +62868,7 @@
 /* 620 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "bank.png";
+	module.exports = __webpack_require__.p + "logo.png";
 
 /***/ },
 /* 621 */

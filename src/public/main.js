@@ -3,7 +3,7 @@ import instantsearch from 'instantsearch.js'
 
 require('./favicon.ico')
 require('./apple-touch-icon.png')
-require('./images/bank.png')
+require('./images/logo.png')
 require('./images/government.png')
 require('./images/washington-dc.png')
 require('./images/america-background.png')
@@ -45,7 +45,7 @@ var search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-box',
-    placeholder: 'Search over 500 speeches by US presidents...',
+    placeholder: 'Search 500+ speeches by 43 US presidents...',
     poweredBy: true
   })
 )

@@ -62886,7 +62886,7 @@
 /* 623 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "america-background.png";
+	module.exports = __webpack_require__.p + "america-background.jpg";
 
 /***/ },
 /* 624 */

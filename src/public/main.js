@@ -35,6 +35,10 @@ var itemTemplate = (data) => {
   `
 }
 
+var refinementItemTemplate = `
+  <input type="checkbox" class="{{cssClasses.checkbox}} refined-{{isRefined}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />
+  <label class="refined-{{isRefined}}">&rsaquo; {{name}}</label>`
+
 var search = instantsearch({
   appId: 'LJWA1ETX6Y',
   apiKey: 'b17e3b630561cf3717d70a1ffa4c5450',
@@ -49,6 +53,19 @@ search.addWidget(
     poweredBy: true
   })
 )
+
+search.addWidget(
+  instantsearch.widgets.refinementList({
+    container: '#facets-container',
+    attributeName: 'speaker',
+    operator: 'or',
+    limit: 50,
+    sortBy: ['name:asc'],
+    templates: {
+      item: refinementItemTemplate
+    }
+  })
+);
 
 search.addWidget(
   instantsearch.widgets.hits({

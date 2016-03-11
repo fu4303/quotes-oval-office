@@ -76,6 +76,8 @@
 	  return '\n    <div class="panel panel-default">\n      <div class="panel-body">\n        <div class="col-md-12">\n          <p class="quote-text">' + quoteValue + '</p>\n        </div>\n      </div>\n      <div class="panel-footer">\n        <a target="_blank" href="' + data.url + '">' + data._highlightResult.title.value + '</a>\n        <br/>\n        <span class="text-muted"><strong>' + data._highlightResult.speaker.value + '</strong> &middot; ' + friendlyDate + ' &middot; ' + friendlyAgo + '</span>\n      </div>\n    </div>\n  ';
 	};
 
+	var refinementItemTemplate = '\n  <input type="checkbox" class="{{cssClasses.checkbox}} refined-{{isRefined}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />\n  <label class="refined-{{isRefined}}">&rsaquo; {{name}}</label>';
+
 	var search = (0, _instantsearch2.default)({
 	  appId: 'LJWA1ETX6Y',
 	  apiKey: 'b17e3b630561cf3717d70a1ffa4c5450',
@@ -87,6 +89,17 @@
 	  container: '#search-box',
 	  placeholder: 'Search 500+ speeches by 43 US presidents...',
 	  poweredBy: true
+	}));
+
+	search.addWidget(_instantsearch2.default.widgets.refinementList({
+	  container: '#facets-container',
+	  attributeName: 'speaker',
+	  operator: 'or',
+	  limit: 50,
+	  sortBy: ['name:asc'],
+	  templates: {
+	    item: refinementItemTemplate
+	  }
 	}));
 
 	search.addWidget(_instantsearch2.default.widgets.hits({

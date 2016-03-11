@@ -7359,14 +7359,24 @@ h1 {
 }
 
 .ais-search-box--powered-by {
-  margin: 10px 0 20px;
-  float: right;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .ais-search-box--powered-by {
+    display: block;
+    margin: -75px 0 20px 0;
+    float: right;
+  }
 }
 
 #pagination-container {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   background: #f5f5f5;
+}
+
+.ais-pagination {
   border: 1px solid #ddd;
 }
 
@@ -7378,4 +7388,47 @@ h1 {
 .ais-pagination--item {
   padding: 15px 10px 10px;
   font-size: 22px;
+}
+
+#facets-container {
+  width: 100%;
+  height: 92px;
+  margin-top: 5px;
+  overflow-y: scroll;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  padding: 5px 2px;
+}
+
+#facets-container input {
+  display: inline-block;
+  cursor: pointer;
+  display: none;
+}
+
+#facets-container label {
+  margin: 1px 0 1px 7px;
+  padding: 3px 6px 1px 6px;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #777;
+}
+
+#facets-container label.refined-true {
+  color: white;
+  background: #337ab7;
+}
+
+.ais-refinement-list--list {
+}
+
+.ais-refinement-list--item {
+  display: inline-block;
+  width: 150px;
+  overflow-x: hidden;
+  white-space: nowrap;
 }

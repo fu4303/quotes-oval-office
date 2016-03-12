@@ -7359,6 +7359,7 @@ h1 {
 
 @media (min-width: 992px) {
   .ais-search-box--powered-by {
+    color: #777;
     display: block;
     margin: -70px 0 20px 0;
     float: right;

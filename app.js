@@ -105,7 +105,7 @@
 	search.addWidget(_instantsearch2.default.widgets.hits({
 	  container: '#hits-container',
 	  templates: {
-	    empty: '<p class="nothing-found text-danger">No quotes found.</p>',
+	    empty: '',
 	    item: itemTemplate
 	  },
 	  hitsPerPage: 25

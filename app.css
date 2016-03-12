@@ -7353,11 +7353,6 @@ h1 {
   font-style: normal;
 }
 
-.nothing-found {
-  margin: 0 15px;
-  font-style: italic;
-}
-
 .ais-search-box--powered-by {
   display: none;
 }
@@ -7365,7 +7360,7 @@ h1 {
 @media (min-width: 992px) {
   .ais-search-box--powered-by {
     display: block;
-    margin: -75px 0 20px 0;
+    margin: -70px 0 20px 0;
     float: right;
   }
 }

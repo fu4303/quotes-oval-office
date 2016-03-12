@@ -1291,7 +1291,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	var core = module.exports = {version: '2.1.4'};
+	var core = module.exports = {version: '2.1.3'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
@@ -2145,18 +2145,11 @@
 	  // ES3 wrong here
 	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
 
-	// fallback for IE11 Script Access Denied error
-	var tryGet = function(it, key){
-	  try {
-	    return it[key];
-	  } catch(e){ /* empty */ }
-	};
-
 	module.exports = function(it){
 	  var O, T, B;
 	  return it === undefined ? 'Undefined' : it === null ? 'Null'
 	    // @@toStringTag case
-	    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
+	    : typeof (T = (O = Object(it))[TAG]) == 'string' ? T
 	    // builtinTag case
 	    : ARG ? cof(O)
 	    // ES3 arguments fallback
@@ -2677,8 +2670,7 @@
 	  , SymbolRegistry = shared('symbol-registry')
 	  , AllSymbols     = shared('symbols')
 	  , ObjectProto    = Object.prototype
-	  , USE_NATIVE     = typeof $Symbol == 'function'
-	  , QObject        = global.QObject;
+	  , USE_NATIVE     = typeof $Symbol == 'function';
 
 	// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
 	var setSymbolDesc = DESCRIPTORS && $fails(function(){
@@ -2830,8 +2822,7 @@
 	  if(!(key in Wrapper))dP(Wrapper, key, {value: USE_NATIVE ? sym : wrap(sym)});
 	};
 
-	// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-	if(!QObject || !QObject.prototype || !QObject.prototype.findChild)setter = true;
+	setter = true;
 
 	$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
 	  // 19.4.2.1 Symbol.for(key)
@@ -3066,18 +3057,18 @@
 	  , gOPS     = __webpack_require__(87)
 	  , pIE      = __webpack_require__(64)
 	  , toObject = __webpack_require__(50)
-	  , IObject  = __webpack_require__(37)
-	  , $assign  = Object.assign;
+	  , IObject  = __webpack_require__(37);
 
 	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = !$assign || __webpack_require__(24)(function(){
-	  var A = {}
+	module.exports = __webpack_require__(24)(function(){
+	  var a = Object.assign
+	    , A = {}
 	    , B = {}
 	    , S = Symbol()
 	    , K = 'abcdefghijklmnopqrst';
 	  A[S] = 7;
 	  K.split('').forEach(function(k){ B[k] = k; });
-	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+	  return a({}, A)[S] != 7 || Object.keys(a({}, B)).join('') != K;
 	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
 	  var T     = toObject(target)
 	    , aLen  = arguments.length
@@ -3091,8 +3082,9 @@
 	      , j      = 0
 	      , key;
 	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
-	  } return T;
-	} : $assign;
+	  }
+	  return T;
+	} : Object.assign;
 
 /***/ },
 /* 97 */

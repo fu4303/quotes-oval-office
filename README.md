@@ -9,5 +9,5 @@ Live site: [http://oval-quotes.dzello.com](http://oval-quotes.dzello.com)
 Algolia is a hosted API for search. Its flexible ranking and sorting capabilities
 make it appropriate for a large variety of search applications. Implementing Algolia is fast—Oval Quotes took one day to build.
 
-Check out [this screencast](https://youtube.com/v/foopies) to learn more about how Oval Quotes
+Check out [this screencast](https://www.youtube.com/watch?v=xZTNzNjwl3w) to learn more about how Oval Quotes
 uses Algolia's open source [instantsearch.js](https://community.algolia.com/instantsearch.js/) components to provide a great search experience.

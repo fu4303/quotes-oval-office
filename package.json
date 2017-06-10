@@ -8,7 +8,7 @@
   },
   "author": "Josh Dzielak",
   "license": "MIT",
-  "repository": "https://github.com/dzello/inspeech",
+  "repository": "https://github.com/dzello/oval-quotes",
   "dependencies": {
     "algoliasearch": "^3.13.0",
     "babel-core": "^6.0.20",

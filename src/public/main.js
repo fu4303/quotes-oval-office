@@ -40,8 +40,8 @@ var refinementItemTemplate = `
   <label class="refined-{{isRefined}}">&rsaquo; {{name}}</label>`
 
 var search = instantsearch({
-  appId: 'LJWA1ETX6Y',
-  apiKey: 'b17e3b630561cf3717d70a1ffa4c5450',
+  appId: '8H5CQDOJ8H',
+  apiKey: 'edfcf1f288a73d9e6778b4d244420085',
   indexName: 'paragraphs',
   urlSync: true
 })

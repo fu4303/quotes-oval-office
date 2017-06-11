@@ -2,7 +2,7 @@
 
 Search over 500 historical speeches from US Presidents to find quotes (and reasons to laugh or cry).
 
-Live site: [http://github.dzello.io/oval-quotes](http://github.dzello.io/oval-quotes)
+Live site: [http://dzello.github.io/oval-quotes/](http://dzello.github.io/oval-quotes/)
 
 ### Built with Algolia
 

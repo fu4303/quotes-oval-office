@@ -1,12 +1,15 @@
 import fs from 'fs'
 import _ from 'lodash'
 import slug from 'slug'
+import dotenv from 'dotenv'
 import domutils from 'domutils'
 import { select } from 'soupselect'
 import htmlparser from 'htmlparser2'
 import algoliasearch from 'algoliasearch'
 import requestPromise from 'request-promise'
 import { AllHtmlEntities } from 'html-entities'
+
+dotenv.load();
 
 var entities = new AllHtmlEntities()
 var algolia = algoliasearch(process.env.ALGOLIA_APP, process.env.ALGOLIA_KEY)

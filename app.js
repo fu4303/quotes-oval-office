@@ -79,8 +79,8 @@
 	var refinementItemTemplate = '\n  <input type="checkbox" class="{{cssClasses.checkbox}} refined-{{isRefined}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />\n  <label class="refined-{{isRefined}}">&rsaquo; {{name}}</label>';
 
 	var search = (0, _instantsearch2.default)({
-	  appId: 'LJWA1ETX6Y',
-	  apiKey: 'b17e3b630561cf3717d70a1ffa4c5450',
+	  appId: '8H5CQDOJ8H',
+	  apiKey: 'edfcf1f288a73d9e6778b4d244420085',
 	  indexName: 'paragraphs',
 	  urlSync: true
 	});
@@ -14050,7 +14050,7 @@
 /* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license

@@ -296,27 +296,33 @@
 
 	var _slug2 = _interopRequireDefault(_slug);
 
-	var _domutils = __webpack_require__(101);
+	var _dotenv = __webpack_require__(101);
+
+	var _dotenv2 = _interopRequireDefault(_dotenv);
+
+	var _domutils = __webpack_require__(102);
 
 	var _domutils2 = _interopRequireDefault(_domutils);
 
-	var _soupselect = __webpack_require__(102);
+	var _soupselect = __webpack_require__(103);
 
-	var _htmlparser = __webpack_require__(103);
+	var _htmlparser = __webpack_require__(104);
 
 	var _htmlparser2 = _interopRequireDefault(_htmlparser);
 
-	var _algoliasearch = __webpack_require__(104);
+	var _algoliasearch = __webpack_require__(105);
 
 	var _algoliasearch2 = _interopRequireDefault(_algoliasearch);
 
-	var _requestPromise = __webpack_require__(105);
+	var _requestPromise = __webpack_require__(106);
 
 	var _requestPromise2 = _interopRequireDefault(_requestPromise);
 
-	var _htmlEntities = __webpack_require__(106);
+	var _htmlEntities = __webpack_require__(107);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	_dotenv2.default.load();
 
 	var entities = new _htmlEntities.AllHtmlEntities();
 	var algolia = (0, _algoliasearch2.default)(process.env.ALGOLIA_APP, process.env.ALGOLIA_KEY);
@@ -3151,34 +3157,40 @@
 /* 101 */
 /***/ function(module, exports) {
 
-	module.exports = require("domutils");
+	module.exports = require("dotenv");
 
 /***/ },
 /* 102 */
 /***/ function(module, exports) {
 
-	module.exports = require("soupselect");
+	module.exports = require("domutils");
 
 /***/ },
 /* 103 */
 /***/ function(module, exports) {
 
-	module.exports = require("htmlparser2");
+	module.exports = require("soupselect");
 
 /***/ },
 /* 104 */
 /***/ function(module, exports) {
 
-	module.exports = require("algoliasearch");
+	module.exports = require("htmlparser2");
 
 /***/ },
 /* 105 */
 /***/ function(module, exports) {
 
-	module.exports = require("request-promise");
+	module.exports = require("algoliasearch");
 
 /***/ },
 /* 106 */
+/***/ function(module, exports) {
+
+	module.exports = require("request-promise");
+
+/***/ },
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = require("html-entities");

@@ -2,8 +2,10 @@
   "name": "inspeech",
   "version": "1.0.0",
   "description": "Search text of past United States presidential speeches",
-  "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Josh Dzielak",

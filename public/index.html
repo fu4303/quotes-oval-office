@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Oval Quotes &middot; Search 500+ Presidential Speeches</title>
+    <meta charSet="utf-8"/>
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Find quotes in 500+ speeches from 43 US presidents"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="og:image" content="http://dzello.github.io/oval-quotes/logo.png"/>
+    <meta name="og:image:width" content="300"/>
+    <meta name="og:image:height" content="300"/>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png"/>
+    <link rel='stylesheet' href='./app.css'/>
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="background-transparency-sheet"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <p class="text-center">
+            <img class="header-image" src="./logo.png" />
+          </p>
+          <h1 class="text-center">Oval Quotes</h1>
+          <p class="small text-center"><em><a href="https://github.com/dzello/oval-quotes">created</a> by <a href="https://twitter.com/dzello">@dzello</a>
+            &middot; powered by <a href="https://www.algolia.com/">Algolia</a>
+            &middot; data from <a href="http://millercenter.org/">The Miller Center</a>
+          </em></p>
+          <br/>
+          <div class="form">
+            <input class="form-control input-lg" type="text" id="search-box" />
+          </div>
+          <div class="clearfix"></div>
+          <div id="facets-container"></div>
+          <div id="stats-container" class="text-muted"></div>
+          <div class="clearfix"></div>
+          <div id="hits-container"></div>
+          <div id="pagination-container"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-74940210-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
